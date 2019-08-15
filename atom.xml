@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangjia.github.io</id>
     <title>嘎嘎记录</title>
-    <updated>2019-08-15T02:55:47.244Z</updated>
+    <updated>2019-08-15T02:56:34.031Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangjia.github.io"/>
     <link rel="self" href="https://zhangjia.github.io/atom.xml"/>
@@ -83,11 +83,12 @@
 </table>
 <h1 id="引用">引用</h1>
 <blockquote>
-<p>姬生川说过：人不能白活着<br>
-<img src="https://zhangjia.github.io/post-images/1565837685323.png" alt=""><br>
+<p>姬生川说过：人不能白活着</p>
+</blockquote>
+<h1 id="图片-2">图片</h1>
+<p><img src="https://zhangjia.github.io/post-images/1565837685323.png" alt=""><br>
 <img src="https://zhangjia.github.io/post-images/1565837711972.png" alt=""><br>
 <img src="https://zhangjia.github.io/post-images/1565837730771.png" alt=""></p>
-</blockquote>
 ]]></content>
     </entry>
     <entry>
