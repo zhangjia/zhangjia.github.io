@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangjia.github.io</id>
-    <title>Gridea</title>
-    <updated>2019-08-15T01:43:21.176Z</updated>
+    <title>嘎嘎记录</title>
+    <updated>2019-08-15T01:55:39.474Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangjia.github.io"/>
     <link rel="self" href="https://zhangjia.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>记录一些未整理的笔记</subtitle>
     <logo>https://zhangjia.github.io/images/avatar.png</logo>
     <icon>https://zhangjia.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
+    <rights>All rights reserved 2019, 嘎嘎记录</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://zhangjia.github.io/post/hello-gridea</id>
