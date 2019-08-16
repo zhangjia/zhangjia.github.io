@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangjia.github.io</id>
     <title>嘎嘎记录</title>
-    <updated>2019-08-16T14:33:00.765Z</updated>
+    <updated>2019-08-16T15:31:38.255Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangjia.github.io"/>
     <link rel="self" href="https://zhangjia.github.io/atom.xml"/>
@@ -10,6 +10,57 @@
     <logo>https://zhangjia.github.io/images/avatar.png</logo>
     <icon>https://zhangjia.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 嘎嘎记录</rights>
+    <entry>
+        <title type="html"><![CDATA[Linux标记]]></title>
+        <id>https://zhangjia.github.io/post/11.html</id>
+        <link href="https://zhangjia.github.io/post/11.html">
+        </link>
+        <updated>2019-08-16T14:33:04.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="命令">命令</h1>
+<ul>
+<li>
+<p>cd：切换目录</p>
+<ul>
+<li><code>cd /</code> ：打开根目录</li>
+<li><code>cd ..</code>：打开上级目录</li>
+</ul>
+</li>
+<li>
+<p>ls：查看当前文件夹下的所有文件夹</p>
+</li>
+<li>
+<p>pwd：查看当前工作目录9的完整路径</p>
+</li>
+<li>
+<p>df：查看当前磁盘使用情况</p>
+<ul>
+<li>-h：使用K、M、G为单位显示</li>
+<li>-a：显示所有文件系统的磁盘使用情况</li>
+<li>-k：以k字节为单位显示</li>
+<li>-T： 显示文件系统类型（<strong>T必须大写</strong>）</li>
+<li>无论在哪个文件下输入 <code>df -h</code>等命令，都会显示同样的信息，因为该命令显示的是当前磁盘的使用情况</li>
+</ul>
+</li>
+<li>
+<p>du：查看当前目录空间使用情况</p>
+<ul>
+<li>-h： 使用K、M、G为单位显示</li>
+<li>-k：以KB(1024bytes)为单位输出</li>
+<li>-m ：以MB为单位输出</li>
+<li>-s：仅显示总计，只列出最后加总的值</li>
+<li>可以组合使用，比如打开usr文件夹，键入<code>du -hs</code> 或者<code>du -sh</code> 可以查看以GB为单位显示的总计</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<h1 id="其他">其他</h1>
+<h3 id="根目录下binsib和usr下binsbib的区别">根目录下bin/sib和usr下bin/sbib的区别</h3>
+<ul>
+<li>根目录下的bin和sbin存放系统本身带的一些命令</li>
+<li>usr目下的bin和sbin存放的是一些后来安装的软件命令</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Markdown语法]]></title>
         <id>https://zhangjia.github.io/post/w5ff7c3Sr</id>
