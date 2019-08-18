@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangjia.github.io</id>
     <title>嘎嘎记录</title>
-    <updated>2019-08-17T00:58:50.337Z</updated>
+    <updated>2019-08-18T09:28:46.128Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangjia.github.io"/>
     <link rel="self" href="https://zhangjia.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://zhangjia.github.io/images/avatar.png</logo>
     <icon>https://zhangjia.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 嘎嘎记录</rights>
+    <entry>
+        <title type="html"><![CDATA[Linux安装步骤]]></title>
+        <id>https://zhangjia.github.io/post/j8pkdTmHe</id>
+        <link href="https://zhangjia.github.io/post/j8pkdTmHe">
+        </link>
+        <updated>2019-08-18T09:28:17.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://zhangjia.github.io/post-images/1566120514146.png" alt=""></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Linux标记]]></title>
         <id>https://zhangjia.github.io/post/11.html</id>
@@ -59,6 +68,8 @@
 <li>根目录下的bin和sbin存放系统本身带的一些命令</li>
 <li>usr目下的bin和sbin存放的是一些后来安装的软件命令</li>
 </ul>
+<h3 id="root用户的家目录是root普通用户的家目录是home下的用户名的那个文件夹">root用户的家目录是root，普通用户的家目录是home下的用户名的那个文件夹</h3>
+<h3 id="根目录下直接输入cd回车也可以进入家目录">根目录下直接输入cd回车，也可以进入家目录</h3>
 ]]></content>
     </entry>
     <entry>
