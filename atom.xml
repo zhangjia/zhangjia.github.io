@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangjia.github.io</id>
     <title>嘎嘎记录</title>
-    <updated>2019-08-18T09:31:10.504Z</updated>
+    <updated>2019-08-19T08:44:54.180Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangjia.github.io"/>
     <link rel="self" href="https://zhangjia.github.io/atom.xml"/>
@@ -38,17 +38,33 @@
         <content type="html"><![CDATA[<h1 id="命令">命令</h1>
 <ul>
 <li>
+<p>命令格式：命令 参数 目标对象</p>
+<ul>
+<li><code>ls -l /ur</code> 以列表的方式查看usr文件下目录文件</li>
+</ul>
+</li>
+<li>
 <p>cd：切换目录</p>
 <ul>
-<li><code>cd /</code> ：打开根目录</li>
-<li><code>cd ..</code>：打开上级目录</li>
+<li>
+<p><code>-cd</code> 回到家目录</p>
+<p><code>-cd~</code> 回到家目录</p>
+<p><code>-cd /</code>  回到根目录</p>
+<p><code>-cd -</code> 回到上次工作目录</p>
+<p><code>-cd .</code> 当前目录</p>
+<p><code>-cd ..</code> 回到上一级目录</p>
+</li>
 </ul>
 </li>
 <li>
 <p>ls：查看当前文件夹下的所有文件夹</p>
+<ul>
+<li><code>ls -h</code> 以单位显示大小</li>
+<li><code>ls -l</code> 列示文件和目录的详细信息，还有一种简介的写法：<code>ll</code></li>
+</ul>
 </li>
 <li>
-<p>pwd：查看当前工作目录9的完整路径</p>
+<p>pwd：查看当前工作目录的完整路径</p>
 </li>
 <li>
 <p>df：查看当前磁盘使用情况</p>
@@ -70,16 +86,271 @@
 <li>可以组合使用，比如打开usr文件夹，键入<code>du -hs</code> 或者<code>du -sh</code> 可以查看以GB为单位显示的总计</li>
 </ul>
 </li>
-<li></li>
-</ul>
-<h1 id="其他">其他</h1>
-<h3 id="根目录下binsib和usr下binsbib的区别">根目录下bin/sib和usr下bin/sbib的区别</h3>
+<li>
+<p>yum install tree：安装tree</p>
+</li>
+<li>
+<p>su 用户名 ：切换用户</p>
 <ul>
-<li>根目录下的bin和sbin存放系统本身带的一些命令</li>
-<li>usr目下的bin和sbin存放的是一些后来安装的软件命令</li>
+<li><code>su root</code></li>
 </ul>
-<h3 id="root用户的家目录是root普通用户的家目录是home下的用户名的那个文件夹">root用户的家目录是root，普通用户的家目录是home下的用户名的那个文件夹</h3>
-<h3 id="根目录下直接输入cd回车也可以进入家目录">根目录下直接输入cd回车，也可以进入家目录</h3>
+</li>
+<li>
+<p>mkdir ：创建一个或者多个目录，用-p递归创建目录</p>
+<ul>
+<li><code>mkdir demo</code></li>
+<li><code>mkdir a/b/c -p</code> ：递归创建多级目录 <code>mkdir -p a/b/c</code> 也可以</li>
+</ul>
+</li>
+<li>
+<p>touch：创建新文件</p>
+<ul>
+<li><code>touch a.log</code></li>
+</ul>
+</li>
+<li>
+<p><code>&gt;</code>： 创建新文件</p>
+<ul>
+<li><code>&gt; b.log</code></li>
+</ul>
+</li>
+<li>
+<p>cp：复制</p>
+<ul>
+<li>a目录下有a.log和b目录，将a.log，复制到b目录中：<code>cd a</code>  然后 <code>cp a.log b</code></li>
+<li>a目录下有a.log和b目录，将a.log，复制到b目录中，并改名为b.log：<code>cd a</code>  然后 <code>cp a.log b/b.log</code></li>
+<li>demo目录下有a目录，a目录下有b目录，b目录下有多个文件，将b目录复制到demo目录下和a目录同级：：<code>cd demo/a</code>  然后 <code>cp b ..</code> 会显示略过目录，因为b目录下还有文件，所以需要递归复制：<code>cp -r b ..</code></li>
+</ul>
+</li>
+<li>
+<p>mv：移动</p>
+<ul>
+<li>和上面的命令都一样，只不过把cp改成mv</li>
+<li>重命名：比如把a目录下的a.log改成ab.log：<code>mv a.log ab.log</code></li>
+</ul>
+</li>
+<li>
+<p>删除</p>
+<ul>
+<li>删除a目录下的a.log：进入a目录后，<code>rm a.log</code>需要输入y确认才能删除，可以使用 <code>rm -rf a.log</code>来直接删除，不询问</li>
+<li>可以直接用多个空格分隔多个文件名，批量删除</li>
+</ul>
+</li>
+<li>
+<p>查看文件内容</p>
+<ul>
+<li>
+<p>cat  文件名</p>
+<ul>
+<li>
+<p><code>cat -n</code>显示文件内容时，打印行号</p>
+</li>
+<li>
+<p><code>cat –b</code>同上，但排除空行</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>more  文件名：分屏查看，回车翻页，只能向下翻页，q或者ctrl + c退出</p>
+<ul>
+<li>less  文件名：分屏查看，可以向上向下键翻页 ，只有q能退出</li>
+</ul>
+</li>
+<li>
+<p>head  文件名：前十行</p>
+<ul>
+<li>
+<p>head -n x：显示文件头x行</p>
+</li>
+<li>
+<p>tail  文件名：后十行</p>
+<ul>
+<li>tail  -n x：显示文件末尾x行</li>
+</ul>
+</li>
+<li>
+<p>tail -f  ：实时显示文件变化</p>
+</li>
+</ul>
+</li>
+<li>
+<p>压缩</p>
+<ul>
+<li>zip 压缩文件名 源文件 ：压缩文件</li>
+<li><code>zip a.zip a.log</code>
+<ul>
+<li>或者直接写<code>zip a a.log</code></li>
+</ul>
+</li>
+<li>zip -r 压缩文件名 源目录 ：压缩目录
+<ul>
+<li><code>zip -r a.zip a</code></li>
+</ul>
+</li>
+<li>unzip 压缩文件名 ：解压缩
+<ul>
+<li>unzip a.zip</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>压缩</p>
+<ul>
+<li>tar   -zcvf   压缩包名.tar.gz   源文件</li>
+</ul>
+</li>
+<li>
+<p>选项</p>
+<ul>
+<li>
+<p>z :   压缩为tar.gz</p>
+</li>
+<li>
+<p>解压缩</p>
+<ul>
+<li>
+<p>tar   -zxvf   压缩包名.tar.gz</p>
+</li>
+<li>
+<p>选项</p>
+</li>
+<li>
+<p>x:  解压缩.tar.gz格式</p>
+</li>
+</ul>
+</li>
+<li>
+<p>压缩多个文件：<code>tar -zcvf test.tar.gz a.log b.log</code></p>
+</li>
+<li>
+<p>压缩目录不需要加-r，和压缩文件一样</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>rpm -qa</code>查看当前系统安装了哪些软件</p>
+<ul>
+<li><code>rpm -qa | grep gcc</code> 查看gcc有没有安装</li>
+</ul>
+</li>
+</ul>
+<h1 id="yum">yum</h1>
+<ul>
+<li>安装软件
+<ul>
+<li><code>yum install xxx</code></li>
+</ul>
+</li>
+<li>搜搜
+<ul>
+<li><code>yum search java</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="vim">vim</h1>
+<h2 id="操作模式">操作模式</h2>
+<h3 id="命令模式">命令模式</h3>
+<p>控制屏幕光标的移动，字符、字或行的删除，移动复制某区段及进入Insert mode下，或者到 last line mode。</p>
+<h3 id="插入模式">插入模式</h3>
+<p>只有在Insert mode下，才可以做文字输入，按「ESC」键可回到命令模式。</p>
+<h3 id="底行模式">底行模式</h3>
+<p>将文件保存或退出vi，也可以设置编辑环境，如寻找字符串、列出行号……等。</p>
+<h2 id="基本命令">基本命令</h2>
+<ul>
+<li>vim   +  文件名：打开后光标位于文件最后一行</li>
+<li>vim   +n   文件名：打开后光标位于文件第n行</li>
+<li>vim   +/xxx   文件名：打开后光标位于xxx所在的行，可以用于快速定位指定内容</li>
+<li>vim 文件a  文件b  文件c：打开（创建多个文件），底行模式“n”切换</li>
+</ul>
+<p><img src="C:%5CUsers%5Czhang%5CDesktop%5C%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%5C1.png" alt=""></p>
+<p><img src="C:%5CUsers%5Czhang%5CDesktop%5C%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%5C2.png" alt="2"></p>
+<p><img src="C:%5CUsers%5Czhang%5CDesktop%5C%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%5C3.png" alt="3"></p>
+<h1 id="linux">Linux</h1>
+<h2 id="安装java">安装Java</h2>
+<ol>
+<li><code>yum search java</code> :</li>
+<li><code>yum install java-1.8.0-openjdk</code> ：安装jre</li>
+<li><code>yum install java-1.8.0-openjdk-devel</code> ：安装jdk，直接安装这个也可以，上面的那个会被自动安装</li>
+<li>安装的时候加-y参数可以不用输入y安装，直接安装</li>
+</ol>
+<h1 id="安装mysql">安装mysql</h1>
+<ol>
+<li><code>yum search mariadb</code></li>
+<li><code>yum install mariadb-server</code></li>
+<li>启动sql：<code>systemctl start mariadb</code></li>
+<li>设置用户名和密码：<code>mysqladmin -u root password zhangjia</code></li>
+</ol>
+<h1 id="允许mysql的root用户远程登录">允许mysql的root用户远程登录</h1>
+<pre><code>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '123456';
+FLUSH PRIVILEGES;
+
+# 其中by后面的密码就是yml文件中配置的密码，yml中的密码要随着这个密码而更改，还可以直接用mysqladmin来设置这个by后面的密码
+</code></pre>
+<h2 id="安装tomcat">安装Tomcat</h2>
+<ol>
+<li>
+<p>打开安装目录：<code>cd /usr/local</code></p>
+</li>
+<li>
+<p>下载Tomcat：<code>wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz</code></p>
+</li>
+<li>
+<p>解压缩安装包：<code>tar -zxvf apache-tomcat-8.5.43.tar.gz</code></p>
+</li>
+<li>
+<p>启动Tomcat：进入bin目录，输入<code>./startup.sh</code>启动tomcat</p>
+<pre><code>4.1关闭tomcat：`./showdown.sh`
+</code></pre>
+</li>
+<li>
+<p>关闭防火墙：<code>systemctl stop firewalld.service</code></p>
+</li>
+<li>
+<p><code>ifconfig</code>查看ip</p>
+</li>
+</ol>
+<h1 id="部署springboot的应用程序">部署SpringBoot的应用程序</h1>
+<ol>
+<li>将项目打包<br>
+<code>mvn package</code></li>
+<li>导出数据<br>
+使用Navicat导出SQL文件</li>
+<li>导入数据<br>
+使用Navicat导入SQL文件</li>
+<li>将打包好的jar文件上传到服务器<br>
+使用xftp上传文件</li>
+<li>在服务器启动jar文件<br>
+<code>java -jar xxx.jar</code><br>
+后台启动：<code>nohup java -jar xxx.jar &amp;</code></li>
+<li>通过进程结束程序<br>
+ps -ef | grep java，可以看到进程的id<br>
+kill 进程id</li>
+</ol>
+<h2 id="自动联网">自动联网</h2>
+<ol>
+<li><code>cd /etc/sysconfig/netword-scripts</code></li>
+<li><code>vim ifcfg</code> ，将ONBOOT修改为yes</li>
+</ol>
+<h1 id="补充">补充</h1>
+<h5 id="红色压缩文件">红色：压缩文件</h5>
+<h5 id="蓝色目录">蓝色：目录</h5>
+<h5 id="linux不是根据扩展名来判断文件类型但是建议写上">linux不是根据扩展名来判断文件类型，但是建议写上</h5>
+<h5 id="根目录下binsib和usr下binsbib的区别">根目录下bin/sib和usr下bin/sbib的区别</h5>
+<h5 id="根目录下的bin和sbin存放系统本身带的一些命令">根目录下的bin和sbin存放系统本身带的一些命令</h5>
+<h5 id="usr目下的bin和sbin存放的是一些后来安装的软件命令">usr目下的bin和sbin存放的是一些后来安装的软件命令</h5>
+<h5 id="root用户的家目录是root普通用户的家目录是home下的用户名的那个文件夹">root用户的家目录是root，普通用户的家目录是home下的用户名的那个文件夹</h5>
+<h5 id="任意目录下直接输入cd回车也可以进入家目录">任意目录下直接输入cd回车，也可以进入家目录</h5>
+<h5 id="ctrl-l-清屏">ctrl + l ：清屏</h5>
+<p>查找tree命令在哪：which tree</p>
+<p>联网：<code>dhclient</code></p>
+<p>重启 <code>init 6</code></p>
+<p>关机 <code>init 0</code></p>
+<p>向上翻页：shift + pg up</p>
+<p>向下翻页：shift + pg on</p>
 ]]></content>
     </entry>
     <entry>
